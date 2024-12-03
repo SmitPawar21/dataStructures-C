@@ -9,10 +9,13 @@ All the codes are in C programming language.
 - infix to postfix
 - postfix evaluation
 - palindrome using stack
+- stack using linked list
+- balanced parenthesis
 - ## Queue
 - queue implementation using Array
 - queue implementation using linked list
 - circular queue using Array
+- deque
 - deque using Array
 - ## Linked List
 - singly-linked list 
@@ -24,6 +27,15 @@ All the codes are in C programming language.
 - Breadth First Search
 - ## Tree
 - Binary Search Tree
+- Binary tree operations
+- Tree traversal
+- Height of tree
+- Mirroring of Tree
+- Internal, External & Total nodes 
+- ## Searching
+- Linear Search
+- Binary Search
+- Binary Search using Recursion
 
 Feel free to fork this repository and submit pull requests if you have suggestions for optimizations or alternative solutions. 
 
