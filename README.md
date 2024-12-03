@@ -36,6 +36,7 @@ All the codes are in C programming language.
 - Linear Search
 - Binary Search
 - Binary Search using Recursion
+- Index Sequential Search
 
 Feel free to fork this repository and submit pull requests if you have suggestions for optimizations or alternative solutions. 
 
