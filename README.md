@@ -37,6 +37,10 @@ All the codes are in C programming language.
 - Binary Search
 - Binary Search using Recursion
 - Index Sequential Search
+- ## Sorting
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
 
 Feel free to fork this repository and submit pull requests if you have suggestions for optimizations or alternative solutions. 
 
