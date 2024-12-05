@@ -7,7 +7,9 @@ All the codes are in C programming language.
 ## Topics covered 
 - ## Stack
 - infix to postfix
+- infix to prefix
 - postfix evaluation
+- prefix evaluation
 - palindrome using stack
 - stack using linked list
 - balanced parenthesis
@@ -15,13 +17,14 @@ All the codes are in C programming language.
 - queue implementation using Array
 - queue implementation using linked list
 - circular queue using Array
-- deque
 - deque using Array
+- priority queue using linked list
 - ## Linked List
 - singly-linked list 
 - doubly-linked list
 - circular-linked list
 - polynomial addition using linked list
+- reversing linked list using stack
 - ## Graph
 - Depth First Search
 - Breadth First Search
@@ -31,7 +34,10 @@ All the codes are in C programming language.
 - Tree traversal
 - Height of tree
 - Mirroring of Tree
-- Internal, External & Total nodes 
+- Internal, External & Total nodes
+- ## Heap
+- Heap - Insertion, Deletion and Heapify
+- Heap Sort
 - ## Searching
 - Linear Search
 - Binary Search
