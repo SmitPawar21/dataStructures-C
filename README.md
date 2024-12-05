@@ -47,6 +47,7 @@ All the codes are in C programming language.
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Merge Sort
 
 Feel free to fork this repository and submit pull requests if you have suggestions for optimizations or alternative solutions. 
 
