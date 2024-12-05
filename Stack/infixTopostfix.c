@@ -59,7 +59,7 @@ void infixToPostfix(char infix[], char postfix[])
         }
         else
         {
-            if(prcd(stack[top]) >= prcd(temp))
+            while(prcd(stack[top]) >= prcd(temp))
             {
                 postfix[q++] = stack[top--];
             }
