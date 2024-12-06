@@ -70,7 +70,7 @@ void postorder(struct node *par) {
 }
 
 void delete() {
-    struct node *temp, *parent;
+    struct node *temp, *parent, *pred, *pred_parent;
     int exist_value;
 
     printf("Enter value to be Deleted: ");
@@ -81,13 +81,14 @@ void delete() {
     }
     else {
         temp = root;
-        while((temp -> data != exist_value) && temp != NULL) {
+        parent = NULL;
+        while(temp != NULL && (temp -> data != exist_value)) {
             parent = temp;
             if(exist_value > (temp -> data)) {
-                temp = temp -> left;
-            }
-            else {
                 temp = temp -> right;
+            }
+            else if(exist_value < (temp -> data)) {
+                temp = temp -> left;
             }
         }
         if(temp == NULL) {
@@ -96,7 +97,10 @@ void delete() {
         else{
             // Condition 1: Deleting leaf node
             if((temp -> left == NULL) && (temp -> right == NULL)) {
-                if((temp -> data) > (parent -> data)) {
+                if(temp == root) {
+                    root = NULL;
+                }
+                else if((temp -> data) >= (parent -> data)) {
                     parent -> right = NULL;
                 }
                 else {
@@ -104,8 +108,44 @@ void delete() {
                 }
             }
 
-            // Condition 2: 
-            //  ...pending
+            // Condition 2: Temp has one child (Left Child)
+            else if(temp -> right == NULL) {
+                if(temp == root) {
+                    root = temp -> left;
+                }
+                else if(temp -> data >= parent -> data) {
+                    parent -> right = temp -> left;
+                }
+                else {
+                    parent -> left = temp -> left;
+                }
+            }
+
+            // Condition 3: Temp has one child (Right Child)
+            else if(temp -> left == NULL) {
+                if(temp == root) {
+                    root = temp -> right;
+                }
+                else if(temp -> data >= parent -> data) {
+                    parent -> right = temp -> right;
+                }
+                else {
+                    parent -> left = temp -> right;
+                }
+            }
+
+            // Condition 4: Temp has Two children
+            else {
+                pred_parent = temp;
+                pred = temp -> left;
+
+                while(pred -> right != NULL) {
+                    pred_parent = pred;
+                    pred = pred -> right;
+                }
+                temp -> data = pred -> data;
+                pred_parent -> right = pred -> left;
+            }
         }
     }
 }
@@ -137,6 +177,8 @@ void main() {
                     break;
             case 4: printf("postorder traversal: ");
                     postorder(root);
+                    break;
+            case 5: delete();
                     break;
             case 0: exit = 1;   // Exit is True
                     break;
